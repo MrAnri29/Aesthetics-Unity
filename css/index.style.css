@@ -1,0 +1,197 @@
+/* Etc. */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+Body {
+    background-color: #0e0e0e;
+}
+
+/* Navbar */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    font-family: "Nunito", sans-serif;
+    background-color: black;
+    position: relative;
+    z-index: 1;
+    padding: 35px 20px;
+}
+
+.logo a{
+    color: white;
+    letter-spacing: 2px;
+    font-size: 30px;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.logo a:hover {
+    color: red;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    transition: all 0.3s ease;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 17px;
+    padding: 0px 10px;
+}
+
+.nav-links li a:after {
+    content: "";
+    position: absolute;
+    background-color: red;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover:after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #c20000;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 55%;
+    }
+    .banner {
+        background: none;
+        background-size: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 90vh;
+        top: 10vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5 ease-in;
+        background: black;
+        color: white;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+    }
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+/* End of Navbar */
+
+/* Page 1 */
+
+.banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(/src/nevergiveup.jpg);
+    background-size: cover;
+    z-index: 0;
+    color: white;
+    overflow-x: hidden;
+}
+
+.banner h1 {
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 9rem;
+    z-index: 1;
+    top: 35%;
+    position: relative;
+    left: 15%;
+}
+
+.banner .never {
+    color: red;
+    font-size: 9rem;
+    display: inline;
+    border-right: 10px solid red;
+    width: 36%;
+    animation: blink 0.8s infinite ease;
+    padding-right: 8px;
+}
+
+@keyframes blink {
+    50% {
+        border-right: none;
+    }
+}
