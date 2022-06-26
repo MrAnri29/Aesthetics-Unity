@@ -36,6 +36,24 @@ h1Txt.addEventListener("mouseleave", () => {
     mouseCursor.classList.remove("txt-grow");
 });
 
+const introductions = document.getElementById('introduction')
+
+introductions.addEventListener("mouseover", () => {
+    mouseCursor.classList.add("txt-grow");
+});
+introductions.addEventListener("mouseleave", () => {
+    mouseCursor.classList.remove("txt-grow");
+});
+
+const introductionp = document.getElementById('introduction-p')
+
+introductionp.addEventListener("mouseover", () => {
+    mouseCursor.classList.add("txt-grow");
+});
+introductionp.addEventListener("mouseleave", () => {
+    mouseCursor.classList.remove("txt-grow");
+});
+
 const navSlide = () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');

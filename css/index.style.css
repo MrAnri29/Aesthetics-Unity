@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 Body {
     background-color: black;
     cursor: none;
@@ -49,6 +53,7 @@ Body {
     transform: scale(3);
     border: white;
     background-color: white;
+    transform-origin: 70% 70%;
 }
 
 /* End of cursor */
@@ -215,9 +220,14 @@ nav {
 .zyzz {
     position: relative;
     top: 30vh;
-    left: 300px;
+    left: 280px;
     width: 300px;
     height: 300px;
+    background-image: url(/src/zyzz-fistpump.gif);
+    background-size: cover;
+    background-position: center;
+    z-index: 3;
+    padding: 20px 20px 20px 20px;
 }
 
 .page2 h1 {
@@ -227,6 +237,12 @@ nav {
     max-width: 300px;
     font-size: 50px;
     text-align: right;
+    z-index: 3;
+    transition: all 0.3s ease;
+}
+
+.page2 h1:hover {
+    color: red;
 }
 
 .page2 h3 {
@@ -235,16 +251,24 @@ nav {
     left: 700px;
     max-width: 400px;
     text-align: justify;
+    z-index: 3;
+    transition: all 0.3s ease;
+}
+
+.page2 h3:hover {
+    color: #ff6600;
 }
 
 .page2 h3 a {
     text-decoration: none;
     color: red;
     transition: all 0.3s ease;
+    z-index: 3;
+    cursor: none;
 }
 
 .page2 h3 a:hover {
-    color: white;
+    color: gold;
 }
 
 @media screen and (max-width: 1300px) {

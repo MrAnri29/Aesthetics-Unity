@@ -66,9 +66,9 @@
 
     <!-- Page 2 -->
     <div class="page2">
-        <img class="zyzz" src="/src/zyzz-fistpump.gif" data-aos="fade-right" data-aos-duration="1000">
-        <h1 data-aos="fade-left" data-aos-duration="1000" class="page2-text">Introduction</h1>
-        <h3 data-aos="fade-left" data-aos-duration="1000" class="page2-text"><a href="https://discord.gg/6aHrxUF4Ww">Aesthetics Unity</a>
+        <div class="zyzz" data-aos="fade-right" data-aos-duration="1000" data-tilt></div>
+        <h1 data-aos="fade-left" data-aos-duration="1000" id="introduction">Introduction</h1>
+        <h3 data-aos="fade-left" data-aos-duration="1000" id="introduction-p"><a href="https://discord.gg/6aHrxUF4Ww">Aesthetics Unity</a>
             is a discord server about healthy life. His owner is <a
                 href="https://www.instagram.com/_vajex/">Vajex.</a> At this server you can ask any questions about your
             body, diet etc. our team will help you 😉. Also here you can find many friends, play with them, workout with
@@ -83,6 +83,17 @@
     <script>
         AOS.init();
     </script>
+    <script type="text/javascript" src="./Js/vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".zyzz"), {
+            max: 25,
+            speed: 400
+        });
+        
+        //It also supports NodeList
+        VanillaTilt.init(document.querySelectorAll(".zyzz"));
+    </script>
+</body>
 </body>
 
 </html>
