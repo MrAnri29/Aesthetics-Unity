@@ -9,7 +9,8 @@
 
     <meta name="description" content="Aesthetics Unity-s official website">
     <meta name="author" content="Mr.Anri#0001">
-    <meta name="keywords" content="gym, aesthetics, calesthetics, gymstaff, vajex, anri, pluto, powerlifting, healthyife, healthy life, health, healthy, unity, aesthetics unity,">
+    <meta name="keywords"
+        content="gym, aesthetics, calesthetics, gymstaff, vajex, anri, pluto, powerlifting, healthyife, healthy life, health, healthy, unity, aesthetics unity,">
     <meta property="og:title" content='Aesthetics Unity'>
     <meta property="og:image" content="/src/servericon.png">
     <meta content="#36393F" data-react-helmet="true" name="theme-color">
@@ -22,15 +23,20 @@
     <!-- link -->
     <link rel="stylesheet" href="./css/index.style.css">
     <link rel="shortcut icon" href="/src/servericon.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
+
+    <!-- Cursor -->
+    <div class="cursor"></div>
 
     <!-- Navbar -->
     <nav>
         <div class="logo">
             <h4><a href="https://discord.gg/6aHrxUF4Ww">Aesthetics Unity</a></h4>
         </div>
+        <div class="mobile-menu-bg"></div>
         <ul class="nav-links">
             <li>
                 <a href="https://aestheticsunity.ga">Home</a>
@@ -55,12 +61,28 @@
     <!-- Page 1 -->
     <section class="banner">
         <h1 class="never"></h1>
-        <h1>GIVE UP</h1>
+        <h1 class="Give-up">GIVE UP</h1>
     </section>
+
+    <!-- Page 2 -->
+    <div class="page2">
+        <img class="zyzz" src="/src/zyzz-fistpump.gif" data-aos="fade-right" data-aos-duration="1000">
+        <h1 data-aos="fade-left" data-aos-duration="1000" class="page2-text">Introduction</h1>
+        <h3 data-aos="fade-left" data-aos-duration="1000" class="page2-text"><a href="https://discord.gg/6aHrxUF4Ww">Aesthetics Unity</a>
+            is a discord server about healthy life. His owner is bodybuilder <a
+                href="https://www.instagram.com/_vajex/">Vajex.</a> At this server you can ask any questions about your
+            body, diet etc. our team will help you 😉. Also here you can find many friends, play with them, workout with
+            them, discover news with them and many, many other... Join us by clicking <a
+                href="https://discord.gg/6aHrxUF4Ww">here</a></h3>
+    </div>
 
     <!-- script -->
     <script type="text/javascript" src="./Js/index.script.js"></script>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
