@@ -7,6 +7,8 @@ function cursor(e) {
     mouseCursor.style.left = e.pageX + "px";
 }
 
+// Nav hovers ;D
+
 const navLinksA = document.querySelectorAll('.nav-links li a');
 
 navLinksA.forEach(link => {
@@ -27,6 +29,8 @@ logo.addEventListener("mouseleave", () => {
     mouseCursor.classList.remove("link-grow");
 });
 
+// Page 1 (banner) hovers brah
+
 const h1Txt = document.querySelector('.banner .Give-up')
 
 h1Txt.addEventListener("mouseover", () => {
@@ -35,6 +39,8 @@ h1Txt.addEventListener("mouseover", () => {
 h1Txt.addEventListener("mouseleave", () => {
     mouseCursor.classList.remove("txt-grow");
 });
+
+// Page 2 hovers
 
 const introductions = document.getElementById('introduction')
 
@@ -52,6 +58,15 @@ introductionp.addEventListener("mouseover", () => {
 });
 introductionp.addEventListener("mouseleave", () => {
     mouseCursor.classList.remove("txt-grow");
+});
+
+const zyzz = document.querySelector('.zyzz')
+
+zyzz.addEventListener("mouseover", () => {
+    mouseCursor.classList.add("zyzz-grow");
+});
+zyzz.addEventListener("mouseleave", () => {
+    mouseCursor.classList.remove("zyzz-grow");
 });
 
 const navSlide = () => {

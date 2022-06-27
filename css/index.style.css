@@ -56,6 +56,13 @@ Body {
     transform-origin: 70% 70%;
 }
 
+.zyzz-gwor {
+    transform: scale(3);
+    border: white;
+    background-color: white;
+    transform-origin: 50% 50%;
+}
+
 /* End of cursor */
 
 /* Navbar */
@@ -226,7 +233,6 @@ nav {
     background-image: url(/src/zyzz-fistpump.gif);
     background-size: cover;
     background-position: center;
-    z-index: 3;
     padding: 20px 20px 20px 20px;
 }
 
@@ -242,7 +248,7 @@ nav {
 }
 
 .page2 h1:hover {
-    color: red;
+    mix-blend-mode: difference;
 }
 
 .page2 h3 {
@@ -256,7 +262,7 @@ nav {
 }
 
 .page2 h3:hover {
-    color: #ff6600;
+    mix-blend-mode: difference;
 }
 
 .page2 h3 a {
@@ -268,7 +274,8 @@ nav {
 }
 
 .page2 h3 a:hover {
-    color: gold;
+    color: #00FF77;
+    mix-blend-mode: difference;
 }
 
 @media screen and (max-width: 1300px) {
