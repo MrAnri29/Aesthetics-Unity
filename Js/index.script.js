@@ -40,6 +40,24 @@ h1Txt.addEventListener("mouseleave", () => {
     mouseCursor.classList.remove("txt-grow");
 });
 
+const never = document.querySelector('.banner .never')
+
+never.addEventListener("mouseover", () => {
+    mouseCursor.classList.add("txt-grow");
+});
+never.addEventListener("mouseleave", () => {
+    mouseCursor.classList.remove("txt-grow");
+});
+
+const arm_muscle = document.querySelector('.banner img')
+
+arm_muscle.addEventListener("mouseover", () => {
+    mouseCursor.classList.add("txt-grow");
+});
+arm_muscle.addEventListener("mouseleave", () => {
+    mouseCursor.classList.remove("txt-grow");
+});
+
 // Page 2 hovers
 
 const introductions = document.getElementById('introduction')
@@ -74,6 +92,7 @@ const navSlide = () => {
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
     const mobNav = document.querySelector('.mobile-menu-bg');
+
 
     burger.addEventListener("mouseover", () => {
         mouseCursor.classList.add("burger-grow");

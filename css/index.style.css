@@ -16,6 +16,7 @@ html {
 Body {
     background-color: black;
     cursor: none;
+    overflow-x: hidden;
 }
 
 /* Cursor */
@@ -39,7 +40,7 @@ Body {
     transform: scale(2);
     border: white;
     background-color: white;
-    z-index: 1;
+    z-index: 4;
 }
 
 .burger-grow {
@@ -56,11 +57,15 @@ Body {
     transform-origin: 70% 70%;
 }
 
-.zyzz-gwor {
+.zyzz-grow {
     transform: scale(3);
-    border: white;
-    background-color: white;
+    border: #ffffffbb;
+    background-color: #ffffffbb;
     transform-origin: 50% 50%;
+}
+
+.mobile-menu-bg-grow {
+    z-index: 5;
 }
 
 /* End of cursor */
@@ -79,15 +84,16 @@ nav {
 }
 
 .logo {
-    z-index: 3;
+    z-index: 5;
 }
 
-.logo a{
+.logo a {
     color: white;
     letter-spacing: 2px;
     font-size: 30px;
     transition: 0.5s;
     text-decoration: none;
+    cursor: none;
 }
 
 .logo a:hover {
@@ -118,6 +124,7 @@ nav {
     font-weight: 600;
     font-size: 17px;
     padding: 0px 10px;
+    cursor: none;
 }
 
 .nav-links li a:after {
@@ -142,10 +149,10 @@ nav {
 .burger {
     display: none;
     cursor: pointer;
-    z-index: 3;
+    z-index: 10;
 }
 
-.burger div{
+.burger div {
     width: 25px;
     height: 3px;
     background-color: white;
@@ -154,13 +161,15 @@ nav {
 }
 
 .toggle .line1 {
-    transform: rotate(-45deg) translate(-5px,6px);
+    transform: rotate(-45deg) translate(-5px, 6px);
 }
+
 .toggle .line2 {
     opacity: 0;
 }
+
 .toggle .line3 {
-    transform: rotate(45deg) translate(-5px,-6px);
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 /* End of Navbar */
@@ -169,15 +178,32 @@ nav {
 
 .banner {
     position: absolute;
+    display: flex;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100vh;
-    background-image: url(/src/nevergiveup.jpg);
-    background-size: cover;
-    z-index: -3;
     color: white;
     overflow-x: hidden;
+}
+
+.banner img {
+    transform: scale(0.8);
+    left: -5%;
+    position: relative;
+    z-index: 3;
+}
+
+.banner img:hover {
+    mix-blend-mode: difference;
+}
+
+.text-box {
+    top: 0;
+    left: 0;
+    position: relative;
+    height: 100vh;
+    width: 120vh;
+    left: 5%;
 }
 
 .banner h1 {
@@ -187,8 +213,9 @@ nav {
     top: 35%;
     position: relative;
     left: 15%;
-    z-index: 4;
+    z-index: 3;
     transition: all 0.3s ease;
+    width: 35rem;
 }
 
 .banner .never {
@@ -202,7 +229,7 @@ nav {
 }
 
 .banner h1:hover {
-    color: red;
+    mix-blend-mode: difference;
 }
 
 @keyframes blink {
@@ -228,12 +255,11 @@ nav {
     position: relative;
     top: 30vh;
     left: 280px;
-    width: 300px;
-    height: 300px;
+    max-width: 300px;
+    min-height: 300px;
     background-image: url(/src/zyzz-fistpump.gif);
     background-size: cover;
     background-position: center;
-    padding: 20px 20px 20px 20px;
 }
 
 .page2 h1 {
@@ -279,8 +305,12 @@ nav {
 }
 
 @media screen and (max-width: 1300px) {
-    .banner {
-        background-image: url(/src/black.jpg);
+    .nav-links {
+        width: 50%;
+    }
+    .banner img {
+        transform: scale(0.7);
+        left: -10%;
     }
 }
 
@@ -288,14 +318,33 @@ nav {
     .nav-links {
         width: 55%;
     }
+    .banner img {
+        transform: scale(0.7);
+        left: -15%;
+        top: 3%;
+    }
 }
 
-@media screen and (max-width: 648px) {
-    .banner h1 {
-        font-size: 7rem;
+@media screen and (max-width: 1050px) {
+    .banner img {
+        display: none;
     }
-    .banner .never {
-        font-size: 7rem;
+    .banner .text-box {
+        align-items: center;
+        left: 5%;
+        min-width: 210vh;
+    }
+    .banner .text-box .never {
+        left: 17%;
+    }
+}
+
+@media screen and (max-width: 836px) {
+    .banner .text-box {
+        left: -3%;
+    }
+    .banner .text-box .never {
+        left: 17%;
     }
 }
 
@@ -303,6 +352,7 @@ nav {
     body {
         overflow-x: hidden;
     }
+
     .nav-links {
         position: absolute;
         right: 0;
@@ -313,8 +363,9 @@ nav {
         align-items: center;
         width: 50%;
         color: white;
-        z-index: 3;
+        z-index: 5;
     }
+
     .mobile-menu-bg {
         width: 50%;
         position: absolute;
@@ -326,19 +377,75 @@ nav {
         transform: translateX(100%);
         transition: transform 0.5 ease-in;
         background: #000000cc;
+        z-index: 3;
     }
+
     .nav-links li {
         opacity: 0;
     }
+
     .burger {
         display: block;
     }
+
+    .banner .text-box {
+        left: -7%;
+    }
+
+    .banner .text-box .never {
+        left: 17.5%;
+        z-index: 2;
+    }
+
+    .banner .text-box .Give-Up {
+        z-index: 2;
+    }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 648px) {
+    .banner h1 {
+        font-size: 7rem;
+    }
+
+    .banner .never {
+        font-size: 7rem;
+    }
+
+    .banner .text-box .never {
+        left: 16.5%;
+        z-index: 2;
+    }
+
+    .banner .text-box {
+        left: -11%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .banner h1 {
+        font-size: 7rem;
+    }
+
+    .banner .never {
+        font-size: 7rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .banner h1 {
+        font-size: 6rem;
+    }
+
+    .banner .never {
+        font-size: 6rem;
+    }
+}
+
+@media screen and (max-width: 430px) {
     .banner h1 {
         font-size: 5rem;
     }
+
     .banner .never {
         font-size: 5rem;
     }
@@ -346,8 +453,19 @@ nav {
 
 @media screen and (max-width: 360px) {
     .banner h1 {
+        font-size: 4rem;
+    }
+
+    .banner .never {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 345px) {
+    .banner h1 {
         font-size: 3.5rem;
     }
+
     .banner .never {
         font-size: 3.5rem;
     }
@@ -358,6 +476,7 @@ nav {
         opacity: 0;
         transform: translateX(50px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0px)
@@ -366,4 +485,30 @@ nav {
 
 .nav-active {
     transform: translateX(0%);
+}
+
+
+/* SCROLL BAR */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: white;
+    cursor: none;
+    border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: red;
 }
