@@ -29,55 +29,6 @@ logo.addEventListener("mouseleave", () => {
     mouseCursor.classList.remove("link-grow");
 });
 
-// Page 1 (banner) hovers brah
-
-const h1Txt = document.querySelector('.banner .Give-up')
-
-h1Txt.addEventListener("mouseover", () => {
-    mouseCursor.classList.add("txt-grow");
-});
-h1Txt.addEventListener("mouseleave", () => {
-    mouseCursor.classList.remove("txt-grow");
-});
-
-const never = document.querySelector('.banner .never')
-
-never.addEventListener("mouseover", () => {
-    mouseCursor.classList.add("txt-grow");
-});
-never.addEventListener("mouseleave", () => {
-    mouseCursor.classList.remove("txt-grow");
-});
-
-const arm_muscle = document.querySelector('.banner img')
-
-arm_muscle.addEventListener("mouseover", () => {
-    mouseCursor.classList.add("txt-grow");
-});
-arm_muscle.addEventListener("mouseleave", () => {
-    mouseCursor.classList.remove("txt-grow");
-});
-
-// Page 2 hovers
-
-const introductions = document.getElementById('introduction')
-
-introductions.addEventListener("mouseover", () => {
-    mouseCursor.classList.add("txt-grow");
-});
-introductions.addEventListener("mouseleave", () => {
-    mouseCursor.classList.remove("txt-grow");
-});
-
-const introductionp = document.getElementById('introduction-p')
-
-introductionp.addEventListener("mouseover", () => {
-    mouseCursor.classList.add("txt-grow");
-});
-introductionp.addEventListener("mouseleave", () => {
-    mouseCursor.classList.remove("txt-grow");
-});
-
 const zyzz = document.querySelector('.zyzz')
 
 zyzz.addEventListener("mouseover", () => {
@@ -86,6 +37,25 @@ zyzz.addEventListener("mouseover", () => {
 zyzz.addEventListener("mouseleave", () => {
     mouseCursor.classList.remove("zyzz-grow");
 });
+
+const elements = [
+    document.querySelector('.banner .Give-up'),
+    document.querySelector('.banner .never'),
+    document.querySelector('.banner img'),
+    document.getElementById('introduction'),
+    document.getElementById('introduction-p')
+]
+
+elements.forEach( x => {
+    x.addEventListener("mouseover", () => {
+        mouseCursor.classList.add("txt-grow");
+    })
+    x.addEventListener("mouseleave", () => {
+        mouseCursor.classList.remove("txt-grow");
+    })
+});
+
+
 
 const navSlide = () => {
     const burger = document.querySelector('.burger');
